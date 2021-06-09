@@ -24,9 +24,9 @@ function renderCart() {
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
 
-  let tbody=document.getElementsByTagName('tbody');
+  let tbody=document.getElementById('tbody');
 
-  tbody [0].textContent='';
+  tbody.textContent='';
 
 
 
@@ -39,7 +39,7 @@ function clearCart() {
 function showCart() {
 
   // TODO: Find the table body
-  let tbody=document.getElementsByTagName('tbody');
+  let tbody=document.getElementById('tbody');
 
 
   // TODO: Iterate over the items in the cart
@@ -63,18 +63,18 @@ productTd.textContent=cart.items[i].product;
 tr.appendChild(productTd);
   }
   // TODO: Create a TD for the delete link, quantity,  and the item
+//   let tr = document.createElement('tr');
+//   let deleteTd=document.createElement('td');
+// deleteTd.textContent= 'X';
+// tr.appendChild(deleteTd);
 
-let deleteTd=document.createElement('td');
-deleteTd.textContent= 'X';
-tr.appendChild(deleteTd);
+// let quantityTd=document.createElement('td');
+// quantityTd.textContent=cart.items.quantity;
+// tr.appendChild(quantityTd);
 
-let quantityTd=document.createElement('td');
-quantityTd.textContent=cart.items[i].quantity;
-tr.appendChild(quantityTd);
-
-let productTd=document.createElement('td');
-productTd.textContent=cart.items[i].product;
-tr.appendChild(productTd);
+// let productTd=document.createElement('td');
+// productTd.textContent=cart.items.product;
+// tr.appendChild(productTd);
 
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
 
@@ -87,7 +87,7 @@ function removeItemFromCart(event) {
 if (event.target.textContent === 'X') {
   
 cart.removeItem(event.target.id);
-
+console.log(event.target.textContent);
 
 }
 
