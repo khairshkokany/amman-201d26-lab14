@@ -11,11 +11,10 @@ function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
-  for (let i = 0; i < Product.allProducts; i++) {
+  for (let i in Product.allProducts) {
     let option=document.createElement('option');
-    option.value=Product.allProducts[i].name;
-    option.textContent=Product.allProducts[i].name;
     selectElement.appendChild(option);
+    option.textContent=Product.allProducts[i].name;
     
   }
 
@@ -62,8 +61,8 @@ function updateCounter() {
 
 let itemCount=document.getElementById('itemCount');
 
-count=cart.items.lenght;
-itemCount.textContent = count;
+count=cart.items.length;
+itemCount.textContent = `the number of cataloge is: ${count}`;
 
 }
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
