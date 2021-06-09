@@ -26,7 +26,14 @@ function clearCart() {
 
   let tbody=document.getElementById('tbody');
 
-  tbody.textContent='';
+  // let tbody=document.getElementsByTagName('tbody');
+    // tbody[0].textContent=''
+
+tbody.textContent='';
+
+  // tbody.textContent='';
+
+
 
 
 
